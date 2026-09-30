@@ -1,0 +1,723 @@
+/* =========================================================
+   AMELIA VITAL - MULTYDRINK
+   Paleta inspirada en la referencia:
+   Borgoña: #6F1D35 / Verde oliva: #788B32 / Crema: #F8F5EA
+   ========================================================= */
+
+:root {
+  --burgundy: #6f1d35;
+  --burgundy-dark: #521426;
+  --olive: #788b32;
+  --olive-dark: #596a22;
+  --lime: #a6b94b;
+  --cream: #f8f5ea;
+  --cream-2: #eee9d8;
+  --white: #ffffff;
+  --text: #332d2b;
+  --muted: #706965;
+  --border: rgba(111, 29, 53, .14);
+  --shadow: 0 20px 50px rgba(69, 35, 38, .12);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+em {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: var(--olive);
+}
+
+.navbar-vital {
+  background: rgba(248, 245, 234, .94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(111, 29, 53, .08);
+  padding: 10px 0;
+  transition: .3s ease;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: .8;
+}
+
+.brand-main {
+  color: var(--burgundy);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.brand-sub {
+  color: var(--olive);
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .42em;
+  margin-left: 4px;
+}
+
+.nav-link {
+  color: var(--burgundy);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--olive);
+}
+
+.btn-vital {
+  color: #fff;
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+  border-radius: 50px;
+  font-weight: 700;
+  transition: .25s ease;
+}
+
+.btn-vital:hover {
+  color: #fff;
+  background: var(--burgundy-dark);
+  border-color: var(--burgundy-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-vital {
+  color: var(--burgundy);
+  border: 1.5px solid var(--burgundy);
+  background: transparent;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: .25s ease;
+}
+
+.btn-outline-vital:hover {
+  color: #fff;
+  background: var(--burgundy);
+  transform: translateY(-2px);
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-light {
+  background: var(--cream);
+}
+
+.section-olive {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, .16), transparent 28%),
+    linear-gradient(135deg, var(--olive-dark), var(--olive));
+  color: #fff;
+}
+
+.section-olive .section-title,
+.section-olive p {
+  color: #fff;
+}
+
+.section-heading {
+  max-width: 780px;
+}
+
+.section-title {
+  color: var(--burgundy);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1;
+  margin: 8px 0 18px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--olive-dark);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+.eyebrow.light {
+  color: #e9efc9;
+}
+
+.hero-section {
+  min-height: 100vh;
+  padding: 145px 0 100px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 90% 15%, rgba(120, 139, 50, .18), transparent 24%),
+    linear-gradient(135deg, #f8f5ea 0%, #fffdf7 55%, #e8e8d1 100%);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  border-radius: 50%;
+  background: var(--burgundy);
+  opacity: .07;
+  right: -28vw;
+  top: -20vw;
+}
+
+.hero-section h1 {
+  color: var(--burgundy);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: .92;
+  letter-spacing: -.04em;
+  margin: 15px 0 25px;
+}
+
+.hero-text {
+  max-width: 600px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-features div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--burgundy);
+}
+
+.hero-features i {
+  font-size: 1.25rem;
+  color: var(--olive);
+}
+
+/* =========================================================
+   IMAGEN DEL HERO
+   ========================================================= */
+
+.hero-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.reference-image-wrap {
+  position: relative;
+}
+
+.reference-image-wrap img {
+  width: 100%;
+  max-height: 610px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(111, 29, 53, .9);
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: .7rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.icon-circle {
+  flex: 0 0 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--olive);
+}
+
+.info-item h5 {
+  color: var(--burgundy);
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.benefit-card,
+.ingredient-card,
+.testimonial-card {
+  height: 100%;
+  border-radius: 24px;
+  padding: 30px;
+  background: rgba(255, 255, 255, .95);
+  color: var(--text);
+  box-shadow: 0 18px 35px rgba(40, 50, 15, .12);
+  transition: .3s ease;
+}
+
+.benefit-card:hover,
+.ingredient-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-7px);
+}
+
+.benefit-icon,
+.ingredient-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(120, 139, 50, .13);
+  color: var(--olive-dark);
+  font-size: 1.65rem;
+  margin-bottom: 22px;
+}
+
+.benefit-card h4,
+.ingredient-card h5 {
+  color: var(--burgundy);
+}
+
+.benefit-card p,
+.ingredient-card p {
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.ingredient-card {
+  text-align: center;
+  background: #fffdf7;
+  border: 1px solid rgba(111, 29, 53, .08);
+}
+
+.ingredient-icon {
+  margin: 0 auto 18px;
+}
+
+.vitamin {
+  font-weight: 800;
+  color: #d99a00;
+  background: #fff3c5;
+}
+
+.cta-section {
+  background: var(--cream);
+}
+
+.cta-box {
+  position: relative;
+  overflow: hidden;
+  padding: 70px;
+  border-radius: 35px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(177, 197, 80, .4), transparent 30%),
+    linear-gradient(125deg, var(--burgundy-dark), var(--burgundy));
+  box-shadow: var(--shadow);
+}
+
+.cta-box h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+  margin: 12px 0 20px;
+}
+
+.cta-box p {
+  max-width: 620px;
+  opacity: .85;
+  line-height: 1.8;
+}
+
+.cta-stat {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, .25);
+  background: rgba(255, 255, 255, .08);
+  text-align: center;
+}
+
+.cta-stat span {
+  font-size: .7rem;
+  letter-spacing: .2em;
+}
+
+.cta-stat strong {
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+
+.cta-stat small {
+  letter-spacing: .12em;
+}
+
+.testimonial-card {
+  position: relative;
+  background: #fff;
+}
+
+.quote {
+  color: var(--olive);
+  font-size: 2.3rem;
+}
+
+.testimonial-card>p {
+  color: var(--muted);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  min-height: 75px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--burgundy);
+  color: white;
+  font-weight: 700;
+}
+
+.person strong,
+.person small {
+  display: block;
+}
+
+.person small {
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.cert-section {
+  background:
+    radial-gradient(circle at 0% 100%, rgba(120, 139, 50, .16), transparent 35%),
+    var(--cream-2);
+}
+
+.certificate-list {
+  margin-top: 30px;
+}
+
+.certificate-list div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--burgundy);
+}
+
+.certificate-list i {
+  color: var(--olive);
+  font-size: 1.3rem;
+}
+
+.certificate-placeholder {
+  min-height: 350px;
+  border: 2px dashed rgba(111, 29, 53, .22);
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, .45);
+}
+
+.certificate-placeholder i {
+  font-size: 4rem;
+  color: var(--olive);
+  margin-bottom: 15px;
+}
+
+.certificate-placeholder p {
+  max-width: 430px;
+  color: var(--muted);
+}
+
+.form-section {
+  background: #fffdf7;
+}
+
+.form-card {
+  background: #fff;
+  padding: clamp(25px, 5vw, 60px);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.form-control,
+.form-select {
+  border-radius: 12px;
+  border: 1px solid #ddd6c7;
+  padding: 12px 15px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--olive);
+  box-shadow: 0 0 0 .2rem rgba(120, 139, 50, .13);
+}
+
+.footer {
+  padding: 70px 0 30px;
+  background: var(--burgundy-dark);
+  color: rgba(255, 255, 255, .75);
+}
+
+.footer-brand .brand-main {
+  color: #fff;
+}
+
+.footer-brand .brand-sub {
+  color: #b8c66c;
+}
+
+.footer h6 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: .75rem;
+  margin-bottom: 18px;
+}
+
+.footer a:not(.brand) {
+  display: block;
+  color: rgba(255, 255, 255, .7);
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: .88rem;
+}
+
+.footer a:not(.brand):hover {
+  color: #fff;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid !important;
+  place-items: center;
+  background: rgba(255, 255, 255, .1);
+  color: #fff !important;
+  margin: 0 !important;
+}
+
+.footer hr {
+  border-color: rgba(255, 255, 255, .14);
+  margin: 40px 0 25px;
+}
+
+.back-top {
+  position: fixed;
+  z-index: 1000;
+  right: 22px;
+  bottom: 22px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  display: none;
+  place-items: center;
+  color: #fff;
+  background: var(--burgundy);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+}
+
+.back-top.show {
+  display: grid;
+}
+
+.disclaimer {
+  opacity: .75;
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 125px;
+  }
+
+  .cta-box {
+    padding: 45px 30px;
+  }
+
+  .navbar-collapse {
+    padding: 15px 0 10px;
+  }
+
+  .hero-image img {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .cta-stat {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-features {
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   BOTÓN FLOTANTE WHATSAPP
+   ========================================================= */
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 80px;
+  z-index: 999;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #25D366;
+  color: #ffffff;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  font-size: 30px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  color: #ffffff;
+  background: #20bd5a;
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+}
+
+/* Animación suave */
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(1);
+    opacity: .7;
+  }
+
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+/* Ajuste para celulares */
+@media (max-width: 575.98px) {
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    right: 16px;
+    bottom: 75px;
+    font-size: 27px;
+  }
+
+  .whatsapp-float::before {
+    width: 54px;
+    height: 54px;
+  }
+}
